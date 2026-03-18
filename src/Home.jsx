@@ -1,7 +1,11 @@
+import Carousel from "./components/Carousel";
+import Header from "./components/Header";
+
 export default function Home() {
     return (
         <>
-            <h1>Home</h1>
+            <Header></Header>
+            <Carousel></Carousel>
         </>
     );
 }
