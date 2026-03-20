@@ -18,7 +18,7 @@ function App() {
         <Route path="/info-page" element={<InfoPage />} />
         <Route path="/recetario" element={<Recetario />} />
         <Route path="/paises" element={<ListCountry />} />
-        <Route path="/mealCountry" element={<MealCountry />} />
+        <Route path="/mealCountry/:xpais" element={<MealCountry />} />
       </Routes>
     </>
   );
