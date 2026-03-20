@@ -70,13 +70,13 @@ function ListCatg() {
         LIST MEALS OF CATEGORY
       </p>
       
-      <div className=" px-10  grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="  px-10  grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {recetas.map((receta) => (
           <Link key={receta.idMeal} to={`/receta/${receta.idMeal}`}>
             
             <article
               
-              className="rounded-b-md border border-slate-500 bg-amber-800-200 p-3"
+              className="rounded-b-md border border-slate-600 hover:text-orange-500 bg-blue-100  p-3"
             >
               <p className="text-sm font-semibold text-black-300">
                 {receta.strMeal}

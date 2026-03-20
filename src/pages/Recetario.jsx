@@ -1,9 +1,9 @@
 
 
 
-function Resetas (){
+function Recetario (){
 
- const [recetario, setRecetario] = useState([]);
+ const [recet, setRecet] = useState([]);
 
 
 
@@ -16,4 +16,4 @@ return(
 }
   
 
-export default Recetas;
+export default Recetario;
