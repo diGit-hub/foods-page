@@ -1,16 +1,19 @@
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import Header from "../components/Header";
+import GoBack from "../components/GoBack";
 
 function MealCountry() {
   const { xpais } = useParams();
   const [mealCity, setMealCity] = useState([]);
 
-useEffect(() => {
+  useEffect(() => {
     async function comidasPais() {
       try {
         const { data } = await axios.get(
-          `https://www.themealdb.com/api/json/v1/1/filter.php?a=${xpais}`
+          `https://www.themealdb.com/api/json/v1/1/filter.php?a=${xpais}`,
         );
         setMealCity(data.meals);
       } catch (error) {
@@ -23,23 +26,23 @@ useEffect(() => {
 
   return (
     <div>
-      <p className="flex justify-center text-2xl font-light mb-4">MEALS FAVORITY</p>
+      <Header />
+      <GoBack className="pt-10 pb-1 px-14"></GoBack>
+      <p className="mt-5 flex justify-center text-2xl font-light mb-4">
+        MEALS FAVORITY
+      </p>
       <p className=" flex justify-center text-2xl font-bold mb-4">{xpais}</p>
 
-       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-20">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-20">
         {mealCity.map((meal) => (
-          
-          <div> 
+          <div>
             <img
               src={meal.strMealThumb}
               alt={meal.strMeal}
               className="rounded-1 w-full h-50"
             />
-            <p className="text-center mt-2">
-              {meal.strMeal}
-            </p>
+            <p className="text-center mt-2">{meal.strMeal}</p>
           </div>
-
         ))}
       </div>
     </div>

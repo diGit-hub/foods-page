@@ -23,19 +23,25 @@ function ListCountry() {
   return (
     <>
       {console.log(paises)}
-      
-      <p className="flex justify-center font-light text-2xl py-5">MEALS FOR COUNTRY</p>
-       
-       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-10">
-      {paises.map((paises) => (
-        
-        
-        <Link to={`/mealCountry/${paises.strArea}`}
-        className="bg-white p-3 rounded-x2 shadow text-center hover:scale-105 transition">
-          <p>{paises.strArea}</p>
-        </Link>
-      ))}
 
+      <p className="flex justify-center font-light text-2xl py-5">
+        MEALS BY COUNTRY
+      </p>
+
+      <div className="px-15 grid grid-cols-2 md:grid-cols-5 gap-2 w-fit">
+        {paises.map((paises) => (
+          <Link
+            to={`/mealCountry/${paises.strArea}`}
+            className="w-60 flex bg-white px-3 py-5 gap-5 rounded-x2 shadow text-center hover:scale-105 transition"
+          >
+            <img
+              src={`../src/assets/flags/4x3/${paises.strArea}.svg`}
+              alt={paises.strArea}
+              className="w-auto h-7 object-cover rounded-xl "
+            />
+            <p>{paises.strArea}</p>
+          </Link>
+        ))}
       </div>
     </>
   );
