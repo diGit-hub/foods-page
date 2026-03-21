@@ -1,5 +1,6 @@
 import GoBack from "./components/GoBack";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export default function InfoPage() {
     return (
@@ -14,18 +15,18 @@ export default function InfoPage() {
                         <img className="absolute w-100" src="src/assets/ingredients-note.png"></img>
                         <div className="absolute left-16 top-24">
                             <h2>Ingredients</h2>
-                            <p> - Fake</p>
-                            <p> - Fake</p>
-                            <p> - Fake</p>
-                            <p> - Fake</p>
-                            <p> - Fake</p>
+                            <p> - Fake Ingredient</p>
+                            <p> - Fake Flavour</p>
+                            <p> - Fake Bread</p>
+                            <p> - Fake Natty</p>
+                            <p> - Fake News</p>
                         </div>
                     </div>
                     <img src="src/assets/placeholder-food.jpg"></img>
                     <div></div>
                 </div>
             </main>
-            <footer className="flex w-full justify-center py-12">Placeholder footer Bruh</footer>
+            <Footer></Footer>
         </>
     )
 }
