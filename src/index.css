@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.text-indent {
+    text-indent: 2rem;
+}

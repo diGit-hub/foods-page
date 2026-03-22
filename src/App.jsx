@@ -8,20 +8,17 @@ import Recetario from "./pages/Recetario";
 
 
 function App() {
-  return (
-
-    <>
-
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/info-page" element={<InfoPage />} />
-        <Route path="/recetario" element={<Recetario />} />
-        <Route path="/paises" element={<ListCountry />} />
-        <Route path="/mealCountry/:xpais" element={<MealCountry />} />
-      </Routes>
-    </>
-  );
+    return (
+        <>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/info-page/:id" element={<InfoPage />} />
+                <Route path="/recetario" element={<Recetario />} />
+                <Route path="/paises" element={<ListCountry />} />
+                <Route path="/mealCountry/:xpais" element={<MealCountry />} />
+            </Routes>
+        </>
+    );
 }
 
 export default App;
