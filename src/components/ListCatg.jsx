@@ -65,11 +65,11 @@ function ListCatg() {
         ))}
       </div>
 
-      <p className="px-10 my-5 font-light text-2xl">LIST MEALS OF CATEGORY</p>
+      <p className="px-10 my-5 font-light text-2xl">MEALS BY CATEGORY</p>
 
       <div className="  px-10  grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {recetas.map((receta) => (
-          <Link key={receta.idMeal} to={`/receta/${receta.idMeal}`}>
+          <Link key={receta.idMeal} to={`/info-page/${receta.idMeal}`}>
             <article className="rounded-b-md border border-slate-600 hover:text-orange-500 bg-blue-100  p-3">
               <p className="text-sm font-semibold text-black-300">
                 {receta.strMeal}

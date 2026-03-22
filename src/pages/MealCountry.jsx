@@ -35,14 +35,16 @@ function MealCountry() {
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-20">
         {mealCity.map((meal) => (
-          <div>
-            <img
-              src={meal.strMealThumb}
-              alt={meal.strMeal}
-              className="rounded-1 w-full h-50"
-            />
+          <Link to={`/info-page/${meal.idMeal}`}>
+            <div className="overflow-hidden rounded-2xl">
+              <img
+                src={meal.strMealThumb}
+                alt={meal.strMeal}
+                className="rounded-1 w-full h-50 transition-transform duration-300 hover:scale-110"
+              />
+            </div>
             <p className="text-center mt-2">{meal.strMeal}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
