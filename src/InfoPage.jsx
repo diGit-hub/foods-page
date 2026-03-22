@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import GoBack from "./components/GoBack";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ingredientsNote from "./assets/ingredients-note.png";
 
 export default function InfoPage() {
     const { id } = useParams();
@@ -75,7 +76,7 @@ export default function InfoPage() {
                     <div className="relative flex justify-center">
                         <img
                             className="h-96 object-contain"
-                            src="src/assets/ingredients-note.png"
+                            src={ingredientsNote}
                             alt="Ingredients note"
                         />
                         <div className="absolute top-12 left-1/2 -translate-x-1/2 w-full px-10 text-sm text-center">
