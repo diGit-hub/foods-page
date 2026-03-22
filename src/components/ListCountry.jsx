@@ -35,7 +35,7 @@ function ListCountry() {
             className="w-60 flex bg-white px-3 py-5 gap-5 rounded-x2 shadow text-center hover:scale-105 transition"
           >
             <img
-              src={`/src/assets/flags/4x3/${paises.strArea}.svg`}
+              src={`/flags/4x3/${paises.strArea}.svg`}
               alt={paises.strArea}
               className="w-auto h-7 object-cover rounded-xl "
             />
